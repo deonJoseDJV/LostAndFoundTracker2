@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaSearch, FaBullhorn, FaClock, FaIdCard, FaUsers, FaShieldAlt, FaEye, FaUser, FaSignOutAlt } from 'react-icons/fa';
-import { useAuth } from '../context/AuthContext'; // Add this import
+import { useAuth } from '../context/AuthContext';
 
 const Home = () => {
-    const { user, logout } = useAuth(); // Add this
+    const { user, logout } = useAuth();
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -16,7 +16,7 @@ const Home = () => {
                             <FaShieldAlt className="text-3xl text-blue-600 mr-3" />
                             <span className="text-2xl font-bold text-gray-900">SafeReturn</span>
                         </div>
-                        <div className="flex items-center space-x-2 sm:space-x-4 px-3 sm:px-0">
+                        <div className="flex items-center space-x-4">
                             {user ? (
                                 // Show when user is logged in
                                 <>
@@ -38,10 +38,10 @@ const Home = () => {
                             ) : (
                                 // Show when user is not logged in
                                 <>
-                                    <Link to="/login" className="text-gray-700 hover:text-blue-600 font-medium px-2 sm:px-0">
+                                    <Link to="/login" className="text-gray-700 hover:text-blue-600 font-medium">
                                         Login
                                     </Link>
-                                    <Link to="/register" className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 sm:px-6 py-2 rounded-full font-medium hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 mx-1 sm:mx-0">
+                                    <Link to="/register" className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-2 rounded-full font-medium hover:from-blue-700 hover:to-indigo-700 transition-all duration-300">
                                         Get Started
                                     </Link>
                                 </>
@@ -51,7 +51,7 @@ const Home = () => {
                 </div>
             </nav>
 
-            {/* Rest of your Home.jsx remains exactly the same */}
+            {/* Hero Section */}
             <section className="relative py-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto text-center">
                     <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
