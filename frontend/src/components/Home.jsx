@@ -16,7 +16,7 @@ const Home = () => {
                             <FaShieldAlt className="text-3xl text-blue-600 mr-3" />
                             <span className="text-2xl font-bold text-gray-900">SafeReturn</span>
                         </div>
-                        <div className="flex items-center space-x-4">
+                        <div className="flex items-center space-x-2 sm:space-x-4 px-3 sm:px-0">
                             {user ? (
                                 // Show when user is logged in
                                 <>
@@ -38,10 +38,10 @@ const Home = () => {
                             ) : (
                                 // Show when user is not logged in
                                 <>
-                                    <Link to="/login" className="text-gray-700 hover:text-blue-600 font-medium">
+                                    <Link to="/login" className="text-gray-700 hover:text-blue-600 font-medium px-2 sm:px-0">
                                         Login
                                     </Link>
-                                    <Link to="/register" className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-2 rounded-full font-medium hover:from-blue-700 hover:to-indigo-700 transition-all duration-300">
+                                    <Link to="/register" className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 sm:px-6 py-2 rounded-full font-medium hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 mx-1 sm:mx-0">
                                         Get Started
                                     </Link>
                                 </>
