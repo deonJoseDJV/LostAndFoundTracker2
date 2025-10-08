@@ -8,15 +8,15 @@ const Home = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-            {/* Navigation - BALANCED SPACING */}
+            {/* Navigation - FIXED */}
             <nav className="bg-white shadow-sm">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between h-16 items-center">
-                        <div className="flex items-center pl-4 sm:pl-0"> {/* Added left padding for mobile */}
+                        <div className="flex items-center">
                             <FaShieldAlt className="text-3xl text-blue-600 mr-3" />
                             <span className="text-2xl font-bold text-gray-900">SafeReturn</span>
                         </div>
-                        <div className="flex items-center space-x-4 pr-4 sm:pr-0"> {/* Added right padding for mobile */}
+                        <div className="flex items-center space-x-4">
                             {user ? (
                                 // Show when user is logged in
                                 <>
