@@ -1,7 +1,10 @@
 import axios from 'axios';
 
 // ✅ Change to port 5000 (where your backend actually runs)
-const API_URL = 'http://localhost:5000/api';
+// For production - use relative URL (same domain)
+const API_URL = process.env.NODE_ENV === 'production' 
+  ? '/api' 
+  : 'http://localhost:5000/api';
 
 const api = axios.create({
     baseURL: API_URL
